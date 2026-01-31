@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dftv3bsas5lq7"]
+
+[ext_resource type="Script" uid="uid://d15aifbfo5ibw" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://bff1v80whfsw1" path="res://Player.gd" id="2_h2yge"]
+
+[node name="Main" type="Node2D" unique_id=376399711]
+script = ExtResource("1_0xm2m")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=45345892]
+script = ExtResource("2_h2yge")
+
+[node name="NPC_detector" type="Area2D" parent="Player" unique_id=1135087670]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/NPC_detector" unique_id=1580696815]
+
+[node name="PlayerSprite" type="Sprite2D" parent="Player" unique_id=1829557021]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Player" unique_id=645846510]
+
+[node name="Room1_backdrop" type="Sprite2D" parent="." unique_id=1287561593]
