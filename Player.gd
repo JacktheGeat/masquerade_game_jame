@@ -71,7 +71,7 @@ func setInventory(item: String, Count: int = 1):
 		if playerInventory.get(item) > 0:
 			get_node('Inventory_Layer/Anchor_Items/%s' % item).show()
 			get_node('Inventory_Layer/Anchor_Portraits/Portrait_%s' % item).show()
-		else: 
+		else:
 			get_node(item).visible = false
 			get_node('Portrait_%s' % item).visible = false
 	print("Added %s %s to inventory!" % [Count, item])
