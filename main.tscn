@@ -53,7 +53,6 @@ dialog_initial = Array[String](["HELLO!\\nI am an NPC!", "This is the second pag
 dialog_onGiftRecieved = Array[String](["Is this for me?\\nIts just what I wanted!f"])
 dialog_doneWithYou = Array[String](["Thanks for the rose!"])
 dialog_stillWaiting = Array[String](["You don't have the item i need!\\nBring it and I will say something different!"])
-giftWanted = "Red Rose"
 
 [node name="Sprite2D" type="Sprite2D" parent="Entryway/Doorman_entry" unique_id=1977259207]
 position = Vector2(-11.314829, 2.8239794)
@@ -83,8 +82,33 @@ myPicture = ExtResource("6_7mycd")
 dialog_initial = Array[String](["Hello!\\nDon't you look Dapper!", "This gala is made up of many rooms, each with its own theme!\\nIf you want to enter the next room, you need an appropriate mask.", "However, nobody knows the theme of the next room.\\nThat hasn't stopped people from gathering clues though!"])
 dialog_onGiftRecieved = Array[String](["Here's something to give to the doorman.\\nIt's also a hint for the next room's theme!"])
 dialog_doneWithYou = Array[String](["I dont have any more roses for you!\\nGood luck!"])
-dialog_stillWaiting = Array[String](["UNREACHEABLE TEXT"])
+dialog_stillWaiting = Array[String](["This text should never show"])
+giftGiving = Array[String](["Red Rose", "cotton"])
+quantityGiven = Array[int]([2, 5])
+
+[node name="Ribbon Giver" parent="Room1" unique_id=690722105 instance=ExtResource("2_1bvp3")]
+position = Vector2(619, 189)
+myPicture = ExtResource("6_7mycd")
+dialog_initial = Array[String](["Hello!\\nDon't you look Dapper!", "This gala is made up of many rooms, each with its own theme!\\nIf you want to enter the next room, you need an appropriate mask.", "However, nobody knows the theme of the next room.\\nThat hasn't stopped people from gathering clues though!"])
+dialog_onGiftRecieved = Array[String](["Here's something to give to the doorman.\\nIt's also a hint for the next room's theme!"])
+dialog_doneWithYou = Array[String](["I dont have any more roses for you!\\nGood luck!"])
+dialog_stillWaiting = Array[String](["This text should never show"])
+giftGiving = Array[String](["ribbon"])
+quantityGiven = Array[int]([1])
+giftWanted = Array[String](["Red Rose"])
+quantityWanted = Array[int]([1])
+
+[node name="Spray Giver" parent="Room1" unique_id=394431225 instance=ExtResource("2_1bvp3")]
+position = Vector2(264, 491)
+myPicture = ExtResource("6_7mycd")
+dialog_initial = Array[String](["Hello!\\nDon't you look Dapper!", "This gala is made up of many rooms, each with its own theme!\\nIf you want to enter the next room, you need an appropriate mask.", "However, nobody knows the theme of the next room.\\nThat hasn't stopped people from gathering clues though!"])
+dialog_onGiftRecieved = Array[String](["Here's something to give to the doorman.\\nIt's also a hint for the next room's theme!"])
+dialog_doneWithYou = Array[String](["I dont have any more roses for you!\\nGood luck!"])
+dialog_stillWaiting = Array[String](["This text should never show"])
 giftGiving = "Red Rose"
+quantityGiven = Array[int]([1])
+giftWanted = Array[String](["ribbon"])
+quantityWanted = Array[int]([0])
 
 [node name="Doorman_Room1" parent="Room1" unique_id=639911888 instance=ExtResource("2_1bvp3")]
 position = Vector2(772, 145)
