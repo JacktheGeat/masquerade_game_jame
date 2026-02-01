@@ -24,13 +24,17 @@ func _physics_process(delta: float) -> void:
 
 	if not isDialogueListening:
 		if Input.is_action_pressed("ui_left") and position.x > roomXMIN + playerWidth:
+			rotation_degrees = -90
 			velocity.x = -1 * SPEED
 		elif Input.is_action_pressed("ui_right") and position.x < roomXMAX - playerWidth:
+			rotation_degrees = 90
 			velocity.x = 1 * SPEED
 		else: velocity.x = 0
 		if Input.is_action_pressed("ui_up") and position.y > roomYMIN + playerHeight:
+			rotation_degrees = 0
 			velocity.y = -1 * SPEED
 		elif Input.is_action_pressed("ui_down") and position.y < roomYMAX - playerWidth:
+			rotation_degrees = 180
 			velocity.y = 1 * SPEED
 		else: velocity.y = 0
 		move_and_slide()

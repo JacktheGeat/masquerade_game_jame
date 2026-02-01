@@ -105,7 +105,6 @@ dialog_initial = Array[String](["Hello!\\nDon't you look Dapper!", "This gala is
 dialog_onGiftRecieved = Array[String](["Here's something to give to the doorman.\\nIt's also a hint for the next room's theme!"])
 dialog_doneWithYou = Array[String](["I dont have any more roses for you!\\nGood luck!"])
 dialog_stillWaiting = Array[String](["This text should never show"])
-giftGiving = "Red Rose"
 quantityGiven = Array[int]([1])
 giftWanted = Array[String](["ribbon"])
 quantityWanted = Array[int]([0])
@@ -114,7 +113,6 @@ quantityWanted = Array[int]([0])
 position = Vector2(772, 145)
 rotation = 0.31636205
 myPicture = ExtResource("6_7mycd")
-giftWanted = "Red Rose"
 
 [node name="Sprite2D" type="Sprite2D" parent="Room1/Doorman_Room1" unique_id=315135137]
 position = Vector2(-11.314829, 2.8239794)
@@ -149,7 +147,6 @@ shape = SubResource("RectangleShape2D_efxa6")
 position = Vector2(497.79898, 164)
 rotation = -0.21555938
 myPicture = ExtResource("6_7mycd")
-giftWanted = "Red Rose"
 
 [node name="Sprite2D" type="Sprite2D" parent="Hallway/Doorman_Room2" unique_id=1818097372]
 position = Vector2(-11.314829, 2.8239794)
