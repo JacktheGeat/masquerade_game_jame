@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dj7cjee4bx8no"]
+
+[ext_resource type="Script" uid="uid://bff1v80whfsw1" path="res://Player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://msr3v1w6248n" path="res://textures/placeholder_character.png" id="2_i3pqv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1bvp3"]
+radius = 75.00667
+
+[node name="Player" type="CharacterBody2D" unique_id=2135009702]
+script = ExtResource("1_onrkg")
+metadata/_edit_group_ = true
+
+[node name="NPC_detector" type="Area2D" parent="." unique_id=1973040032]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC_detector" unique_id=321102933]
+shape = SubResource("CircleShape2D_1bvp3")
+
+[node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1492041399]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_i3pqv")
+
+[node name="UI_Layer" type="CanvasLayer" parent="." unique_id=829253343]
