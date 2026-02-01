@@ -7,16 +7,13 @@ extends Node
 var BoxBase :PackedScene = preload('res://dialog_box.tscn')
 
 
-
-
-
 @export var myPicture :Texture2D
 @export var dialog_initial :Array[String]
 @export var dialog_onGiftRecieved :Array[String]
 @export var dialog_doneWithYou :Array[String]
 @export var dialog_stillWaiting :Array[String]
 
-@export var giftName :String = null
+@export var giftName :String
 
 var spokenYet := false
 var doneWithYou := false
@@ -25,7 +22,7 @@ var doneWithYou := false
 
 func interact(playerInventory :Dictionary) -> DialogBox: #return the correct dialog
 
-	var newDialog :DialogBox = BoxBase.instantiate()
+	var newDialog = BoxBase.instantiate()
 
 	if not spokenYet:
 		spokenYet = true
@@ -37,7 +34,7 @@ func interact(playerInventory :Dictionary) -> DialogBox: #return the correct dia
 	elif doneWithYou: # if player inventory contains needed item
 		newDialog.assemble(myPicture, dialog_doneWithYou)
 
-	elif: #recieving gift
+	elif false: #recieving gift
 		doneWithYou = true
 		newDialog.assemble(myPicture, dialog_onGiftRecieved)
 

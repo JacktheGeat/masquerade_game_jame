@@ -27,14 +27,19 @@ func _physics_process(delta: float) -> void:
 	else: velocity.y = 0
 	move_and_slide()
 	
+	if Input.is_action_just_pressed("ui_accept"):
+		check_for_player()
+	
 	
 func check_for_player():
-	var bodies = $NPC_detector.has_overlapping_areas()
-	for body in bodies:
-		if body.is_in_group("Player"):
-			print("Player is currently inside the area!")
-			# Perform an action, e.g., interact with the object
-		if body.has_method("interact"):
-			body.interact()
-			return true # Found the player
+	var area2ds = $NPC_detector.get_overlapping_areas()
+	for obj in area2ds:
+		print(obj.name)
+		#if obj.get_class() == :
+			#print("Player is currently inside the area!")
+			## Perform an action, e.g., interact with the object
+		if obj.has_method("interact"):
+			print("interact!")
+			#obj.interact(playerInventory)
+			#return true # Found the player
 	return false # Player not found in the area
