@@ -15,7 +15,7 @@ func assemble(npcPicture, npcDialog, finalGift=null):
 	speechStrings = npcDialog
 	$HBoxContainer/VBoxContainer/Panel/portrait.texture = npcPicture
 	$HBoxContainer/SpeechBox.text = '\n'.join(speechStrings[currentPage].split('\\n'))
-		
+
 
 	#print('\n'.join(speechStrings[currentPage].split('\\n')))
 	# if final gift is present, add "you got [item]" sting to end

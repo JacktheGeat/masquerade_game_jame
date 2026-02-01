@@ -37,22 +37,22 @@ func interact(playerInventory :Dictionary) -> DialogBox: #return the correct dia
 
 	elif giftWanted == '': # recieving gift no conditions
 		playerInventory.set(giftGiving, playerInventory.get(giftGiving, 0)+1)
-		
+
 		doneWithYou = true
-		
+
 		dialog_onGiftRecieved.append("You recieved a %s" % giftGiving)
 		newDialog.assemble(myPicture, dialog_onGiftRecieved)
-		
+
 	elif playerInventory.get(giftWanted) and playerInventory[giftWanted] > 0: #recieving gift with conditions
 		playerInventory[giftWanted] -= 1
 		playerInventory.set(giftGiving, playerInventory.get(giftGiving, 0)+1)
-		
+
 		doneWithYou = true
-		
+
 		dialog_onGiftRecieved.append("You recieved a [%s]" % giftGiving)
 		newDialog.assemble(myPicture, dialog_onGiftRecieved)
 
 	else: # waiting for gift
 		newDialog.assemble(myPicture, dialog_stillWaiting)
-	
+
 	return newDialog

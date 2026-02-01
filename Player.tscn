@@ -1,22 +1,53 @@
 [gd_scene format=3 uid="uid://dj7cjee4bx8no"]
 
 [ext_resource type="Script" uid="uid://bff1v80whfsw1" path="res://Player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://msr3v1w6248n" path="res://textures/placeholder_character.png" id="2_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://brd1suvljwhfr" path="res://textures/CharBase.png" id="2_kpjcp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1bvp3"]
 radius = 75.00667
 
 [node name="Player" type="CharacterBody2D" unique_id=2135009702]
 script = ExtResource("1_onrkg")
-metadata/_edit_group_ = true
 
 [node name="NPC_detector" type="Area2D" parent="." unique_id=1973040032]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC_detector" unique_id=321102933]
 shape = SubResource("CircleShape2D_1bvp3")
 
 [node name="PlayerSprite" type="Sprite2D" parent="." unique_id=1492041399]
+visible = false
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_i3pqv")
+texture = ExtResource("2_kpjcp")
 
 [node name="Inventory_Layer" type="CanvasLayer" parent="." unique_id=829253343]
+
+[node name="MaskPanel" type="Panel" parent="Inventory_Layer" unique_id=413917334]
+offset_right = 198.0
+offset_bottom = 146.0
+
+[node name="MaskLabel" type="Label" parent="Inventory_Layer" unique_id=922218085]
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 46.0
+offset_bottom = 30.0
+text = "Your Mask:"
+
+[node name="InvLabel" type="Label" parent="Inventory_Layer" unique_id=1572281383]
+offset_left = 7.0
+offset_top = 152.0
+offset_right = 96.0
+offset_bottom = 175.0
+text = "Your Items:"
+
+[node name="cotton" type="Sprite2D" parent="Inventory_Layer" unique_id=473931617]
+position = Vector2(11, 187)
+
+[node name="ribbon" type="Sprite2D" parent="Inventory_Layer" unique_id=796483569]
+position = Vector2(12, 272)
+
+[node name="paint" type="Sprite2D" parent="Inventory_Layer" unique_id=1324875393]
+position = Vector2(12, 347)
+
+[node name="fabric" type="Sprite2D" parent="Inventory_Layer" unique_id=1652477734]
+position = Vector2(11, 428)

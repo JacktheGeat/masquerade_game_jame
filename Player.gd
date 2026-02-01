@@ -11,10 +11,11 @@ const roomYMAX = 648
 var isDialogueListening: bool = false
 var currentDialogue: DialogBox = null
 
-var playerInventory = { 'cotton': false,
+var playerInventory := { 'cotton': false,
 						'ribbon': false,
 						'paint': false,
 						}
+
 
 
 func _physics_process(delta: float) -> void:
