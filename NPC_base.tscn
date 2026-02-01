@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://0w07hsy4w2gm"]
 
 [ext_resource type="Script" uid="uid://dfvse5n2y5ftg" path="res://npc_base.gd" id="1_krfr7"]
-[ext_resource type="Texture2D" uid="uid://b0uc5nutt0dyw" path="res://textures/icon.svg" id="2_i8jcw"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_krfr7"]
 
@@ -20,7 +19,3 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=53734021]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_nsakb")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1876928526]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_i8jcw")
