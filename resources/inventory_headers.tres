@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://4pw2o7wkrx12"]
+
+[ext_resource type="FontFile" uid="uid://dal0jq80ljue8" path="res://resources/lilita_one_regular.ttf" id="1_ttl8e"]
+
+[resource]
+font = ExtResource("1_ttl8e")
+font_size = 22
+font_color = Color(0.15294118, 0.69411767, 1, 1)

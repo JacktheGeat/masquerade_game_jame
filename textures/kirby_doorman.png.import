@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gjd3me7eruy4"
-path="res://.godot/imported/overlay.png-fa3b604f9c4f1c142249b418f2900579.ctex"
+uid="uid://dlxd2atgb5372"
+path="res://.godot/imported/kirby_doorman.png-60fbba62c0fe7a3014a10556e727a8d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/overlay.png"
-dest_files=["res://.godot/imported/overlay.png-fa3b604f9c4f1c142249b418f2900579.ctex"]
+source_file="res://textures/kirby_doorman.png"
+dest_files=["res://.godot/imported/kirby_doorman.png-60fbba62c0fe7a3014a10556e727a8d7.ctex"]
 
 [params]
 

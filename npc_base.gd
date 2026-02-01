@@ -38,23 +38,23 @@ func interact(getInventory: Callable, addInventory: Callable) -> DialogBox: #ret
 	elif giftWanted == '' and giftGiving != '': # recieving gift no conditions
 		addInventory.call(giftGiving, 1)
 		#playerInventory.set(giftGiving, playerInventory.get(giftGiving, 0)+1)
-		
+
 		doneWithYou = true
-		
+
 		dialog_onGiftRecieved.append("You recieved a %s" % giftGiving)
 		newDialog.assemble(myPicture, dialog_onGiftRecieved)
-		
+
 	elif getInventory.call(giftWanted) > quantityWanted: #recieving gift with conditions
 		addInventory.call(giftWanted, -1 * quantityWanted)
 		addInventory.call(giftGiving, quantityGiven)
 		#playerInventory[giftWanted] -= 1
 		#playerInventory.set(giftGiving, playerInventory.get(giftGiving, 0)+1)
 		doneWithYou = true
-		
+
 		dialog_onGiftRecieved.append("You recieved a [%s]" % giftGiving)
 		newDialog.assemble(myPicture, dialog_onGiftRecieved)
 
 	else: # waiting for gift
 		newDialog.assemble(myPicture, dialog_stillWaiting)
-	
+
 	return newDialog

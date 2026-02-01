@@ -54,10 +54,10 @@ func check_for_player():
 				currentDialogue = obj.interact(getInventory, setInventory)
 				isDialogueListening = true
 				$Inventory_Layer.add_child(currentDialogue)
-				
+
 func getInventory(item: String):
 	return playerInventory.get(item, 0)
-	
+
 func setInventory(item: String, Count: int = 1):
 	playerInventory.set(item, playerInventory.get(item, 0)+Count)
 	print("Added %s %s to inventory!" % [Count, item])

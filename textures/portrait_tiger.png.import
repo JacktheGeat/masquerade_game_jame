@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://msr3v1w6248n"
-path="res://.godot/imported/placeholder_character.png-3d14d6408aae9ada500822ca263545d4.ctex"
+uid="uid://bj4cvxsgi4dst"
+path="res://.godot/imported/portrait_tiger.png-a44164ef4ca2d7d4957237b47f2f078c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/placeholder_character.png"
-dest_files=["res://.godot/imported/placeholder_character.png-3d14d6408aae9ada500822ca263545d4.ctex"]
+source_file="res://textures/portrait_tiger.png"
+dest_files=["res://.godot/imported/portrait_tiger.png-a44164ef4ca2d7d4957237b47f2f078c.ctex"]
 
 [params]
 

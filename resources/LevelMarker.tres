@@ -1,9 +1,0 @@
-[gd_resource type="LabelSettings" format=3 uid="uid://bjk4wrjxkqrx5"]
-
-[ext_resource type="FontFile" uid="uid://brayjxw4xj05v" path="res://assets/lilita_one_regular.ttf" id="1_ve60j"]
-
-[resource]
-line_spacing = 10.0
-font = ExtResource("1_ve60j")
-font_size = 90
-font_color = Color(0.141176, 1, 0.435294, 1)

@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://bio0umhj2io15"]
 
 [ext_resource type="Script" uid="uid://c5t55642tiwii" path="res://dialog_box.gd" id="1_1ki1k"]
-[ext_resource type="Texture2D" uid="uid://b0uc5nutt0dyw" path="res://textures/icon.svg" id="2_cjsg4"]
+[ext_resource type="FontFile" uid="uid://bv4f776wjkthx" path="res://resources/Comfortaa-SemiBold.ttf" id="2_1ki1k"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cjsg4"]
+font = ExtResource("2_1ki1k")
 
 [node name="DialogBox" type="CanvasLayer" unique_id=1079187470]
 script = ExtResource("1_1ki1k")
@@ -28,12 +31,9 @@ layout_mode = 2
 [node name="portrait" type="Sprite2D" parent="HBoxContainer/VBoxContainer/Panel" unique_id=643532725]
 position = Vector2(-70, -1.0000076)
 scale = Vector2(0.8828126, 0.88281155)
-texture = ExtResource("2_cjsg4")
 
-[node name="Label" type="Label" parent="HBoxContainer" unique_id=1106493686]
-layout_mode = 2
-
-[node name="SpeechBox" type="RichTextLabel" parent="HBoxContainer" unique_id=2084354040]
+[node name="SpeechBox" type="Label" parent="HBoxContainer" unique_id=1564944918]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "demo text"
+label_settings = SubResource("LabelSettings_cjsg4")
