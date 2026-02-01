@@ -19,4 +19,4 @@ shape = SubResource("CircleShape2D_1bvp3")
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_i3pqv")
 
-[node name="Inventory_Layer" type="CanvasLayer" parent="." unique_id=829253343 groups=["NPC"]]
+[node name="Inventory_Layer" type="CanvasLayer" parent="." unique_id=829253343]

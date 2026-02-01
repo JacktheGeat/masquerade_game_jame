@@ -8,6 +8,9 @@ const roomXMAX = 1152
 const roomYMIN = 0
 const roomYMAX = 648
 
+var isDialogueListening: bool = false
+var currentDialogue: DialogBox = null
+
 var playerInventory = Dictionary()
 
 
@@ -32,12 +35,17 @@ func _physics_process(delta: float) -> void:
 	
 	
 func check_for_player():
-	var area2ds = $NPC_detector.get_overlapping_areas()
+	if isDialogueListening: # are you listening to dialogue?
+		isDialogueListening = currentDialogue.nextPage()
+		if not isDialogueListening: #is there no dialogue being shown? delete!
+			currentDialogue = null
+			return
+	# check if there are any objects in the area!
+	var area2ds = $NPC_detector.get_overlapping_areas() 
 	for obj: Area2D in area2ds:
-		if is_instance_of(obj, NPC):
-			if obj.has_method("interact"):
+		if is_instance_of(obj, NPC): # is it an NPC?
+			if obj.has_method("interact"): # do they have an interaction?
 				print("interact!")
-				var dialogue = obj.interact(playerInventory)
-				print(dialogue.)
-				return true # Found the player
-	return false # Player not found in the area
+				currentDialogue = obj.interact(playerInventory)
+				isDialogueListening = true
+				
