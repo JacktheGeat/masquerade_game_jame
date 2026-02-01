@@ -1,7 +1,9 @@
 class_name DialogBox
-extends Control
+extends Resource
 
 ## documentation here
+
+@export var something :String
 
 var speechStrings :Array[String]
 

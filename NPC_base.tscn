@@ -3,11 +3,14 @@
 [ext_resource type="Script" uid="uid://dfvse5n2y5ftg" path="res://npc_base.gd" id="1_krfr7"]
 [ext_resource type="Texture2D" uid="uid://b0uc5nutt0dyw" path="res://textures/icon.svg" id="2_i8jcw"]
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_krfr7"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nsakb"]
 size = Vector2(66, 65)
 
 [node name="NPC_base" type="Area2D" unique_id=1137426463]
 script = ExtResource("1_krfr7")
+myPicture = SubResource("CanvasTexture_krfr7")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=53734021]
