@@ -1,5 +1,5 @@
 class_name DialogBox
-extends Resource
+extends CanvasLayer
 
 ## documentation here
 

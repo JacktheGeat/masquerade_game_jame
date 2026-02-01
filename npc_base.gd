@@ -4,7 +4,7 @@ extends Node
 ## thing they want:
 ## thing they give:
 
-var BoxBase :PackedScene = preload('res://dialog_box.tscn')
+var BoxBase = preload('res://dialog_box.tscn')
 
 
 @export var myPicture :Texture2D
@@ -34,7 +34,7 @@ func interact(playerInventory :Dictionary) -> DialogBox: #return the correct dia
 	elif doneWithYou: # if player inventory contains needed item
 		newDialog.assemble(myPicture, dialog_doneWithYou)
 
-	elif false: #recieving gift
+	elif true: #recieving gift
 		doneWithYou = true
 		newDialog.assemble(myPicture, dialog_onGiftRecieved)
 
