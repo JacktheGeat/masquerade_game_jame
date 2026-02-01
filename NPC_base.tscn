@@ -11,6 +11,10 @@ size = Vector2(66, 65)
 [node name="NPC_base" type="Area2D" unique_id=1137426463]
 script = ExtResource("1_krfr7")
 myPicture = SubResource("CanvasTexture_krfr7")
+dialog_initial = Array[String](["demo text: initial dialogue"])
+dialog_onGiftRecieved = Array[String](["demo text: gift recieved"])
+dialog_doneWithYou = Array[String](["demo text: done with you"])
+dialog_stillWaiting = Array[String](["demo text: still waiting"])
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=53734021]

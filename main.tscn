@@ -9,10 +9,6 @@
 [node name="Main" type="Node2D" unique_id=376399711]
 script = ExtResource("1_0xm2m")
 
-[node name="NPC_base" parent="." unique_id=1137426463 instance=ExtResource("2_1bvp3")]
-position = Vector2(285, 272)
-myPicture = ExtResource("3_lquwl")
-
 [node name="Player" parent="." unique_id=2135009702 instance=ExtResource("2_0xm2m")]
 position = Vector2(577, 264)
 motion_mode = 1
@@ -22,3 +18,20 @@ z_index = -50
 position = Vector2(575.99994, 324.5)
 scale = Vector2(3.6000004, 2.028125)
 texture = ExtResource("3_h2yge")
+
+[node name="NPC_base" parent="." unique_id=1137426463 instance=ExtResource("2_1bvp3")]
+position = Vector2(285, 272)
+myPicture = ExtResource("3_lquwl")
+dialog_initial = Array[String](["HELLO!\\nI am an NPC!", "This is the second page of dialogue!\\nIsnt that cool?"])
+dialog_onGiftRecieved = Array[String](["Is this for me?\\nIts just what I wanted!f"])
+dialog_doneWithYou = Array[String](["Thanks for the rose!"])
+dialog_stillWaiting = Array[String](["You don't have the item i need!\\nBring it and I will say something different!"])
+giftName = "Red Rose"
+
+[node name="NPC_base2" parent="." unique_id=1321721647 instance=ExtResource("2_1bvp3")]
+position = Vector2(859, 404)
+myPicture = ExtResource("3_lquwl")
+dialog_initial = Array[String](["I am NPC 2! Nice to meet you!"])
+dialog_onGiftRecieved = Array[String](["I am going to give you a rose!"])
+dialog_doneWithYou = Array[String](["I dont have any more roses for you!"])
+dialog_stillWaiting = Array[String](["This text should never show"])

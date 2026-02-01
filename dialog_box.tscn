@@ -7,8 +7,15 @@
 script = ExtResource("1_1ki1k")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1580549511]
-offset_right = 10.0
-offset_bottom = 23.0
+anchors_preset = -1
+anchor_left = 0.056
+anchor_top = 0.79200006
+anchor_right = 0.9815347
+anchor_bottom = 0.9687284
+offset_left = 123.488
+offset_top = -0.21606445
+offset_right = 0.27198792
+offset_bottom = 0.2639923
 metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1621491088]
@@ -19,7 +26,8 @@ alignment = 1
 layout_mode = 2
 
 [node name="portrait" type="Sprite2D" parent="HBoxContainer/VBoxContainer/Panel" unique_id=643532725]
-scale = Vector2(0.3, 0.3)
+position = Vector2(-70, -1.0000076)
+scale = Vector2(0.8828126, 0.88281155)
 texture = ExtResource("2_cjsg4")
 
 [node name="Label" type="Label" parent="HBoxContainer" unique_id=1106493686]
@@ -27,5 +35,5 @@ layout_mode = 2
 
 [node name="SpeechBox" type="RichTextLabel" parent="HBoxContainer" unique_id=2084354040]
 layout_mode = 2
-text = "demo text
-g"
+size_flags_horizontal = 3
+text = "demo text"
