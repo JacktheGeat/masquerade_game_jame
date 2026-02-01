@@ -4,12 +4,14 @@
 [ext_resource type="PackedScene" uid="uid://dj7cjee4bx8no" path="res://Player.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://0w07hsy4w2gm" path="res://NPC_base.tscn" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://bho7xvuh13xle" path="res://textures/tile.png" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://b0uc5nutt0dyw" path="res://textures/icon.svg" id="3_lquwl"]
 
 [node name="Main" type="Node2D" unique_id=376399711]
 script = ExtResource("1_0xm2m")
 
 [node name="NPC_base" parent="." unique_id=1137426463 instance=ExtResource("2_1bvp3")]
 position = Vector2(285, 272)
+myPicture = ExtResource("3_lquwl")
 
 [node name="Player" parent="." unique_id=2135009702 instance=ExtResource("2_0xm2m")]
 position = Vector2(577, 264)
