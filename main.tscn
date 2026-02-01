@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dj7cjee4bx8no" path="res://Player.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://0w07hsy4w2gm" path="res://NPC_base.tscn" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://bho7xvuh13xle" path="res://textures/tile.png" id="3_h2yge"]
-[ext_resource type="Texture2D" uid="uid://b0uc5nutt0dyw" path="res://textures/icon.svg" id="3_lquwl"]
+[ext_resource type="Texture2D" uid="uid://brd1suvljwhfr" path="res://textures/CharBase.png" id="6_7mycd"]
 
 [node name="Main" type="Node2D" unique_id=376399711]
 script = ExtResource("1_0xm2m")
@@ -19,19 +19,20 @@ position = Vector2(575.99994, 324.5)
 scale = Vector2(3.6000004, 2.028125)
 texture = ExtResource("3_h2yge")
 
-[node name="NPC_base" parent="." unique_id=1137426463 instance=ExtResource("2_1bvp3")]
-position = Vector2(285, 272)
-myPicture = ExtResource("3_lquwl")
+[node name="Doorman" parent="." unique_id=1137426463 instance=ExtResource("2_1bvp3")]
+position = Vector2(1082, 402)
+myPicture = ExtResource("6_7mycd")
 dialog_initial = Array[String](["HELLO!\\nI am an NPC!", "This is the second page of dialogue!\\nIsnt that cool?"])
 dialog_onGiftRecieved = Array[String](["Is this for me?\\nIts just what I wanted!f"])
 dialog_doneWithYou = Array[String](["Thanks for the rose!"])
 dialog_stillWaiting = Array[String](["You don't have the item i need!\\nBring it and I will say something different!"])
-giftName = "Red Rose"
+giftWanted = "Red Rose"
 
-[node name="NPC_base2" parent="." unique_id=1321721647 instance=ExtResource("2_1bvp3")]
-position = Vector2(859, 404)
-myPicture = ExtResource("3_lquwl")
-dialog_initial = Array[String](["I am NPC 2! Nice to meet you!"])
-dialog_onGiftRecieved = Array[String](["I am going to give you a rose!"])
-dialog_doneWithYou = Array[String](["I dont have any more roses for you!"])
+[node name="Flower Giver" parent="." unique_id=1321721647 instance=ExtResource("2_1bvp3")]
+position = Vector2(355, 146)
+myPicture = ExtResource("6_7mycd")
+dialog_initial = Array[String](["Hello!\\nDon't you look Dapper!", "This gala is made up of many rooms, each with its own theme!\\nIf you want to enter the next room, you need an appropriate mask.", "However, nobody knows the theme of the next room.\\nThat hasn't stopped people from gathering clues though!"])
+dialog_onGiftRecieved = Array[String](["Here's something to give to the doorman.\\nIt's also a hint for the next room's theme!"])
+dialog_doneWithYou = Array[String](["I dont have any more roses for you!\\nGood luck!"])
 dialog_stillWaiting = Array[String](["This text should never show"])
+giftGiving = "Red Rose"
