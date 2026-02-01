@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 const SPEED = 300.0
 
 const roomXMIN = 0
@@ -52,14 +51,21 @@ func check_for_player():
 	# check if there are any objects in the area!
 	var area2ds = $NPC_detector.get_overlapping_areas()
 	for obj: Area2D in area2ds:
+		
 		if is_instance_of(obj, NPC): # is it an NPC?
 			if obj.has_method("interact"): # do they have an interaction?
 				print("interact with %s" % obj.name)
 				currentDialogue = obj.interact(getInventory, setInventory)
 				isDialogueListening = true
 				$Inventory_Layer.add_child(currentDialogue)
+		if is_instance_of(obj, DOOR):
+			if obj.has_method("unlock"):
+				if obj.unlock(getInventory): # run check for door open
+					var lockedDialogue = DialogBox.new()
+					lockedDialogue.assemble("res://textures/CharBase.png", "This door is locked!")
+					$Inventory_Layer.add_child(lockedDialogue)
 
-func getInventory(item: String):
+func getInventory(item: String) -> int:
 	return playerInventory.get(item, 0)
 
 func setInventory(item: String, Count: int = 1):

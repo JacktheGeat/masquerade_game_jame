@@ -19,10 +19,6 @@ run/main_scene="uid://dftv3bsas5lq7"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://textures/icon.svg"
 
-[display]
-
-window/size/viewport_height=640
-
 [editor]
 
 version_control/plugin_name="GitPlugin"

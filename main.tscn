@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://brd1suvljwhfr" path="res://textures/CharBase.png" id="6_7mycd"]
 [ext_resource type="Texture2D" uid="uid://dlxd2atgb5372" path="res://textures/kirby_doorman.png" id="6_272bh"]
 [ext_resource type="Texture2D" uid="uid://dvm5iyceuyi8w" path="res://textures/kirby_player.png" id="7_5vw27"]
+[ext_resource type="Script" uid="uid://dqidg848qvv2m" path="res://door.gd" id="7_kek77"]
 [ext_resource type="Texture2D" uid="uid://beycigg0kcbs6" path="res://textures/kirby_npc.png" id="8_kek77"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5vw27"]
@@ -25,6 +26,7 @@ size = Vector2(146, 45)
 script = ExtResource("1_0xm2m")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=461998926]
+unique_name_in_owner = true
 position = Vector2(578, 326)
 
 [node name="Entryway" type="Marker2D" parent="." unique_id=2072563475]
@@ -37,6 +39,7 @@ texture = ExtResource("2_7mycd")
 
 [node name="door_to_Room1" type="Area2D" parent="Entryway" unique_id=644727080]
 position = Vector2(512, 4)
+script = ExtResource("7_kek77")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Entryway/door_to_Room1" unique_id=375359335]
 position = Vector2(56.5, 27.25)
@@ -73,6 +76,7 @@ texture = ExtResource("2_7mycd")
 
 [node name="door_to_hall" type="Area2D" parent="Room1" unique_id=95944672]
 position = Vector2(452, 0)
+script = ExtResource("7_kek77")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room1/door_to_hall" unique_id=1600871124]
 position = Vector2(90.75, 24)
@@ -151,6 +155,7 @@ texture = ExtResource("2_7mycd")
 
 [node name="door_to_Room1" type="Area2D" parent="Hallway" unique_id=565959476]
 position = Vector2(567.79895, 582)
+script = ExtResource("7_kek77")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hallway/door_to_Room1" unique_id=221665844]
 position = Vector2(34.5, 14.5)
@@ -159,6 +164,7 @@ shape = SubResource("RectangleShape2D_4c57u")
 [node name="door_to_Room2" type="Area2D" parent="Hallway" unique_id=834093684]
 visible = false
 position = Vector2(524.79895, 31)
+script = ExtResource("7_kek77")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hallway/door_to_Room2" unique_id=168146030]
 position = Vector2(94, 26)
