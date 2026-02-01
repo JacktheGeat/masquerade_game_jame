@@ -61,17 +61,20 @@ z_index = -1
 texture = ExtResource("3_kne1u")
 
 [node name="Portrait_cotton" type="Sprite2D" parent="Inventory_Layer/Anchor_Portraits" unique_id=302086323]
+visible = false
 z_index = 1
 position = Vector2(-29.686554, -113.024536)
 scale = Vector2(40, 40)
 texture = ExtResource("5_3tkgg")
 
 [node name="Portrait_ribbon" type="Sprite2D" parent="Inventory_Layer/Anchor_Portraits" unique_id=1055201167]
+visible = false
 position = Vector2(0.00024414063, 28.256134)
 scale = Vector2(40, 40)
 texture = ExtResource("6_l6ohk")
 
 [node name="Portrait_paint" type="Sprite2D" parent="Inventory_Layer/Anchor_Portraits" unique_id=568011854]
+visible = false
 position = Vector2(0.0002746582, 1.5258789e-05)
 scale = Vector2(40, 40)
 texture = ExtResource("7_oudfo")
