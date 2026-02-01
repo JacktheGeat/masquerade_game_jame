@@ -9,6 +9,9 @@ script = ExtResource("1_0xm2m")
 
 [node name="Player" parent="." unique_id=2135009702 instance=ExtResource("2_0xm2m")]
 position = Vector2(27, 27)
+motion_mode = 1
 
 [node name="Room1_backdrop" type="Sprite2D" parent="." unique_id=1287561593]
+z_index = -50
+position = Vector2(161, 161)
 texture = ExtResource("3_h2yge")
