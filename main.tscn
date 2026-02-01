@@ -11,7 +11,7 @@
 size = Vector2(123, 63.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kek77"]
-size = Vector2(231, 49)
+size = Vector2(178.5, 49)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4c57u"]
 size = Vector2(151, 37)
@@ -23,7 +23,7 @@ size = Vector2(146, 45)
 script = ExtResource("1_0xm2m")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=461998926]
-position = Vector2(577, 317)
+position = Vector2(578, 326)
 
 [node name="Entryway" type="Marker2D" parent="." unique_id=2072563475]
 
@@ -73,7 +73,7 @@ texture = ExtResource("2_7mycd")
 position = Vector2(452, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room1/door_to_hall" unique_id=1600871124]
-position = Vector2(116.5, 22.5)
+position = Vector2(90.75, 24)
 shape = SubResource("RectangleShape2D_kek77")
 
 [node name="Flower Giver" parent="Room1" unique_id=1321721647 instance=ExtResource("2_1bvp3")]
@@ -110,25 +110,49 @@ quantityGiven = Array[int]([1])
 giftWanted = Array[String](["ribbon"])
 quantityWanted = Array[int]([0])
 
+[node name="Doorman_Room1" parent="Room1" unique_id=639911888 instance=ExtResource("2_1bvp3")]
+position = Vector2(772, 145)
+rotation = 0.31636205
+myPicture = ExtResource("6_7mycd")
+giftWanted = "Red Rose"
+
+[node name="Sprite2D" type="Sprite2D" parent="Room1/Doorman_Room1" unique_id=315135137]
+position = Vector2(-11.314829, 2.8239794)
+rotation = 1.5095862
+scale = Vector2(0.04920519, 0.046861365)
+texture = ExtResource("6_272bh")
+
 [node name="Hallway" type="Marker2D" parent="." unique_id=2031543133]
-position = Vector2(3, -828)
+position = Vector2(5, -1543)
 
 [node name="hallway_backdrop" type="Sprite2D" parent="Hallway" unique_id=1341929141]
 z_index = -50
-position = Vector2(608, -389.99997)
+position = Vector2(603.79895, 324.0001)
 scale = Vector2(0.08489946, 0.14563362)
 texture = ExtResource("2_7mycd")
 
 [node name="door_to_Room1" type="Area2D" parent="Hallway" unique_id=565959476]
-position = Vector2(572, -132)
+position = Vector2(567.79895, 582)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hallway/door_to_Room1" unique_id=221665844]
 position = Vector2(34.5, 14.5)
 shape = SubResource("RectangleShape2D_4c57u")
 
 [node name="door_to_Room2" type="Area2D" parent="Hallway" unique_id=834093684]
-position = Vector2(529, -683)
+position = Vector2(524.79895, 31)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hallway/door_to_Room2" unique_id=168146030]
-position = Vector2(75, 22.5)
+position = Vector2(94, 26)
 shape = SubResource("RectangleShape2D_efxa6")
+
+[node name="Doorman_Room2" parent="Hallway" unique_id=1482202694 instance=ExtResource("2_1bvp3")]
+position = Vector2(497.79898, 164)
+rotation = -0.21555938
+myPicture = ExtResource("6_7mycd")
+giftWanted = "Red Rose"
+
+[node name="Sprite2D" type="Sprite2D" parent="Hallway/Doorman_Room2" unique_id=1818097372]
+position = Vector2(-11.314829, 2.8239794)
+rotation = 1.5095862
+scale = Vector2(0.04920519, 0.046861365)
+texture = ExtResource("6_272bh")
