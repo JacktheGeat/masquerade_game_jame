@@ -3,10 +3,8 @@
 [ext_resource type="Script" uid="uid://d15aifbfo5ibw" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://dj7cjee4bx8no" path="res://Player.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://0w07hsy4w2gm" path="res://NPC_base.tscn" id="2_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://bho7xvuh13xle" path="res://textures/tile.png" id="3_h2yge"]
-[ext_resource type="Texture2D" uid="uid://brd1suvljwhfr" path="res://textures/CharBase.png" id="6_7mycd"]
 [ext_resource type="Texture2D" uid="uid://bho7xvuh13xle" path="res://textures/floortile2.png" id="3_h2yge"]
-[ext_resource type="Texture2D" uid="uid://b0uc5nutt0dyw" path="res://textures/icon.svg" id="3_lquwl"]
+[ext_resource type="Texture2D" uid="uid://brd1suvljwhfr" path="res://textures/CharBase.png" id="6_7mycd"]
 
 [node name="Main" type="Node2D" unique_id=376399711]
 script = ExtResource("1_0xm2m")

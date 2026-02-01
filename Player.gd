@@ -50,7 +50,14 @@ func check_for_player():
 	for obj: Area2D in area2ds:
 		if is_instance_of(obj, NPC): # is it an NPC?
 			if obj.has_method("interact"): # do they have an interaction?
-				print("interact!")
-				currentDialogue = obj.interact(playerInventory)
+				print("interact with %s" % obj.name)
+				currentDialogue = obj.interact(getInventory, setInventory)
 				isDialogueListening = true
 				$Inventory_Layer.add_child(currentDialogue)
+				
+func getInventory(item: String):
+	return playerInventory.get(item, 0)
+	
+func setInventory(item: String, Count: int = 1):
+	playerInventory.set(item, playerInventory.get(item, 0)+Count)
+	print("Added %s %s to inventory!" % [Count, item])

@@ -24,7 +24,7 @@ var doneWithYou := false
 
 
 
-func interact(playerInventory :Dictionary) -> DialogBox: #return the correct dialog
+func interact(getInventory: Callable, addInventory: Callable) -> DialogBox: #return the correct dialog
 	var newDialog = BoxBase.instantiate()
 
 	if not spokenYet:
@@ -35,24 +35,26 @@ func interact(playerInventory :Dictionary) -> DialogBox: #return the correct dia
 	elif doneWithYou: # if player inventory contains needed item
 		newDialog.assemble(myPicture, dialog_doneWithYou)
 
-	elif giftWanted == '': # recieving gift no conditions
-		playerInventory.set(giftGiving, playerInventory.get(giftGiving, 0)+1)
-
+	elif giftWanted == '' and giftGiving != '': # recieving gift no conditions
+		addInventory.call(giftGiving, 1)
+		#playerInventory.set(giftGiving, playerInventory.get(giftGiving, 0)+1)
+		
 		doneWithYou = true
-
+		
 		dialog_onGiftRecieved.append("You recieved a %s" % giftGiving)
 		newDialog.assemble(myPicture, dialog_onGiftRecieved)
-
-	elif playerInventory.get(giftWanted) and playerInventory[giftWanted] > 0: #recieving gift with conditions
-		playerInventory[giftWanted] -= 1
-		playerInventory.set(giftGiving, playerInventory.get(giftGiving, 0)+1)
-
+		
+	elif getInventory.call(giftWanted) > quantityWanted: #recieving gift with conditions
+		addInventory.call(giftWanted, -1 * quantityWanted)
+		addInventory.call(giftGiving, quantityGiven)
+		#playerInventory[giftWanted] -= 1
+		#playerInventory.set(giftGiving, playerInventory.get(giftGiving, 0)+1)
 		doneWithYou = true
-
+		
 		dialog_onGiftRecieved.append("You recieved a [%s]" % giftGiving)
 		newDialog.assemble(myPicture, dialog_onGiftRecieved)
 
 	else: # waiting for gift
 		newDialog.assemble(myPicture, dialog_stillWaiting)
-
+	
 	return newDialog
