@@ -58,6 +58,7 @@ scale = Vector2(0.033685006, 0.03539055)
 
 [node name="Portrait_Plain" type="Sprite2D" parent="Inventory_Layer/Anchor_Portraits" unique_id=23718237]
 z_index = -1
+scale = Vector2(20, 20)
 texture = ExtResource("3_kne1u")
 
 [node name="Portrait_cotton" type="Sprite2D" parent="Inventory_Layer/Anchor_Portraits" unique_id=302086323]
