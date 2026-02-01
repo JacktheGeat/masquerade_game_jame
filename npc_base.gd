@@ -6,7 +6,7 @@ extends Node
 
 var BoxBase = preload('res://dialog_box.tscn')
 
-
+@export var npcName :String
 @export var myPicture :Texture2D
 @export var dialog_initial :Array[String]
 @export var dialog_onGiftRecieved :Array[String]

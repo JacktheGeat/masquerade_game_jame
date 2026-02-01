@@ -7,7 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://brd1suvljwhfr" path="res://textures/CharBase.png" id="6_7mycd"]
 [ext_resource type="Texture2D" uid="uid://dlxd2atgb5372" path="res://textures/kirby_doorman.png" id="6_272bh"]
 [ext_resource type="Texture2D" uid="uid://dvm5iyceuyi8w" path="res://textures/kirby_player.png" id="7_5vw27"]
+[ext_resource type="Texture2D" uid="uid://ee1ebpamchtx" path="res://textures/portrait_fox.png" id="7_efxa6"]
 [ext_resource type="Texture2D" uid="uid://beycigg0kcbs6" path="res://textures/kirby_npc.png" id="8_kek77"]
+[ext_resource type="Texture2D" uid="uid://c34dlvju0q0q4" path="res://textures/portrait_bear.png" id="9_dg77c"]
+[ext_resource type="Texture2D" uid="uid://bj4cvxsgi4dst" path="res://textures/portrait_tiger.png" id="10_ycdy4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5vw27"]
 size = Vector2(123, 63.5)
@@ -50,11 +53,12 @@ motion_mode = 1
 [node name="Doorman_entry" parent="Entryway" unique_id=1137426463 instance=ExtResource("2_1bvp3")]
 position = Vector2(399, 206)
 rotation = -0.78579146
+npcName = "Doorman"
 myPicture = ExtResource("6_7mycd")
-dialog_initial = Array[String](["HELLO!\\nI am an NPC!", "This is the second page of dialogue!\\nIsnt that cool?"])
-dialog_onGiftRecieved = Array[String](["Is this for me?\\nIts just what I wanted!f"])
-dialog_doneWithYou = Array[String](["Thanks for the rose!"])
-dialog_stillWaiting = Array[String](["You don't have the item i need!\\nBring it and I will say something different!"])
+dialog_initial = Array[String](["Hello hello hello! Welcome to the Sequoia Manor Masquerade! Allow me to take your coat…", "I see you already have a basic mask… every room in the manor requires one but your mask must fit the theme of the room. The first room is open to everyone. ", "Oh! Also, if some people don’t want to talk to you, they’re not being rude -- they’re partaking in the vow of silence this week. Those Church of Qualla folks sure have dedication. Feel free to mingle in the first room all night long or mask up for the rooms beyond! Enjoy the party!"])
+dialog_onGiftRecieved = Array[String]([])
+dialog_doneWithYou = Array[String](["Go on, get in there!"])
+dialog_stillWaiting = Array[String]([])
 
 [node name="Sprite2D" type="Sprite2D" parent="Entryway/Doorman_entry" unique_id=1977259207]
 position = Vector2(-11.314829, 2.8239794)
@@ -67,7 +71,7 @@ position = Vector2(3, -828)
 
 [node name="Room1_backdrop" type="Sprite2D" parent="Room1" unique_id=250936034]
 z_index = -50
-position = Vector2(577, 324.00003)
+position = Vector2(577, 327)
 scale = Vector2(0.28806418, 0.16319984)
 texture = ExtResource("2_7mycd")
 
@@ -80,13 +84,14 @@ shape = SubResource("RectangleShape2D_kek77")
 
 [node name="Flower Giver" parent="Room1" unique_id=1321721647 instance=ExtResource("2_1bvp3")]
 position = Vector2(157, 526)
-myPicture = ExtResource("6_7mycd")
-dialog_initial = Array[String](["Hello!\\nDon't you look Dapper!", "This gala is made up of many rooms, each with its own theme!\\nIf you want to enter the next room, you need an appropriate mask.", "However, nobody knows the theme of the next room.\\nThat hasn't stopped people from gathering clues though!"])
-dialog_onGiftRecieved = Array[String](["Here's something to give to the doorman.\\nIt's also a hint for the next room's theme!"])
-dialog_doneWithYou = Array[String](["I dont have any more roses for you!\\nGood luck!"])
-dialog_stillWaiting = Array[String](["This text should never show"])
-giftGiving = Array[String](["Red Rose", "cotton"])
-quantityGiven = Array[int]([2, 5])
+npcName = "Liriel"
+myPicture = ExtResource("7_efxa6")
+dialog_initial = Array[String](["Hello!\\nDon't you look Dapper!", "This gala is made up of many rooms, each with its own theme!\\nIf you want to enter the next room, you need an appropriate mask.", "However, nobody knows the theme of the next room.\\nThat hasn't stopped people from gathering clues though!", "here's soem craft supplies I had left over"])
+dialog_onGiftRecieved = Array[String]([])
+dialog_doneWithYou = Array[String](["I dont have any more stuff  for you!\\nGood luck!"])
+dialog_stillWaiting = Array[String]([])
+giftGiving = Array[String](["fabric", "cotton"])
+quantityGiven = Array[int]([1, 5])
 
 [node name="npc_interactable" type="Sprite2D" parent="Room1/Flower Giver" unique_id=1490106621]
 position = Vector2(4, 8.000002)
@@ -94,28 +99,29 @@ rotation = -0.5235988
 scale = Vector2(0.047934003, 0.04799771)
 texture = ExtResource("7_5vw27")
 
-[node name="Ribbon Giver" parent="Room1" unique_id=690722105 instance=ExtResource("2_1bvp3")]
+[node name="Bob_RibbonGiver" parent="Room1" unique_id=690722105 instance=ExtResource("2_1bvp3")]
 position = Vector2(220, 141)
 rotation = 1.5707964
-myPicture = ExtResource("6_7mycd")
-dialog_initial = Array[String](["Hello!\\nDon't you look Dapper!", "This gala is made up of many rooms, each with its own theme!\\nIf you want to enter the next room, you need an appropriate mask.", "However, nobody knows the theme of the next room.\\nThat hasn't stopped people from gathering clues though!"])
-dialog_onGiftRecieved = Array[String](["Here's something to give to the doorman.\\nIt's also a hint for the next room's theme!"])
-dialog_doneWithYou = Array[String](["I dont have any more roses for you!\\nGood luck!"])
-dialog_stillWaiting = Array[String](["This text should never show"])
+npcName = "BOB"
+myPicture = ExtResource("9_dg77c")
+dialog_initial = Array[String](["My name is Bob, nice to meet you. What brings you to the masquerade tonight?", "Well that sounds fun… I’m here to see my hard work come to fruition! You see, I tailored some of these fine outfits you are seeing tonight. Designed and sewed them all myself…", "It was such a treat to work with such fine cloth. Most of the time I’m stuck sewing together rips in clothing but leading up to the ball, I was knee deep in satins and the like. It was heaven! ", "I’m definitely going to miss this finery after the ball. Say, you wouldn’t happen to have a spare scrap of fabric laying around, would you? I would love to take a little piece home with me to remember this night…", "Oh well, that’s okay. Can’t expect too much out of such a grand night. Would it be too much to ask for you to keep an eye out for any precious bits of fabric this evening?", "Thank you for helping me out! Have a marvelous night!"])
+dialog_onGiftRecieved = Array[String](["Well I’ll be! What a gorgeous scrap of (insert fancy fabric name here). This is perfect, thank you so much!", "I don’t know how I can possibly thank you for your kindness. Allow me to give you something in exchange! Old habits die hard so I’m sure there’s something pretty in these pockets of mine. Let me check…", "Ah ha! Would you look at that? I heard rainbows work well with the theme for the next room so this rainbow ribbon might come in handy. Take it as a token of my gratitude. Thank you so much!"])
+dialog_doneWithYou = Array[String](["BOB: Hello again! I hope you’re having as wonderful of a time as I am. Gowns, glitter, and a piece of (insert same fancy fabric name here) to take home for myself, this night exceeds my wildest dreams!"])
+dialog_stillWaiting = Array[String](["Hello again! Seen any more fabric?"])
 giftGiving = Array[String](["ribbon"])
 quantityGiven = Array[int]([1])
-giftWanted = Array[String](["Red Rose"])
+giftWanted = Array[String](["fabric"])
 quantityWanted = Array[int]([1])
 
-[node name="npc_interactable" type="Sprite2D" parent="Room1/Ribbon Giver" unique_id=1243624890]
+[node name="npc_interactable" type="Sprite2D" parent="Room1/Bob_RibbonGiver" unique_id=1243624890]
 position = Vector2(3.9999695, 9.9999695)
 scale = Vector2(0.047934003, 0.04799771)
 texture = ExtResource("7_5vw27")
 
 [node name="Spray Giver" parent="Room1" unique_id=394431225 instance=ExtResource("2_1bvp3")]
-position = Vector2(978.0001, 507)
-rotation = -2.3561945
-myPicture = ExtResource("6_7mycd")
+position = Vector2(831, 401)
+rotation = 0.7853982
+myPicture = ExtResource("10_ycdy4")
 dialog_initial = Array[String](["Hello!\\nDon't you look Dapper!", "This gala is made up of many rooms, each with its own theme!\\nIf you want to enter the next room, you need an appropriate mask.", "However, nobody knows the theme of the next room.\\nThat hasn't stopped people from gathering clues though!"])
 dialog_onGiftRecieved = Array[String](["Here's something to give to the doorman.\\nIt's also a hint for the next room's theme!"])
 dialog_doneWithYou = Array[String](["I dont have any more roses for you!\\nGood luck!"])
@@ -132,7 +138,12 @@ texture = ExtResource("7_5vw27")
 [node name="Doorman_Room1" parent="Room1" unique_id=639911888 instance=ExtResource("2_1bvp3")]
 position = Vector2(772, 145)
 rotation = 0.31636205
+npcName = "Doorman...?"
 myPicture = ExtResource("6_7mycd")
+dialog_initial = Array[String](["DOORMAN: Having fun? All those masks people are wearing sure are creative. I’m having fun just looking at them!", "All this spectacle certainly makes my work entertaining. As far as jobs go, this is a pretty good one. Don’t be fooled though, it’s hard work. Sometimes it feels like I have to be in three places at once!", "If you want to continue down the hall, you’ll have to have a new mask."])
+dialog_onGiftRecieved = Array[String](["Wow! Would you look at that? Someone’s making their way up in the world. You’re now welcome to head on into the next room!"])
+dialog_doneWithYou = Array[String](["That mask is pretty swag. Head on along whenever you're ready."])
+dialog_stillWaiting = Array[String](["No can do! That mask still doesn’t meet the secret criteria. If you want to continue down the hall, you’ll have to have a new mask."])
 
 [node name="Sprite2D" type="Sprite2D" parent="Room1/Doorman_Room1" unique_id=315135137]
 position = Vector2(-11.314829, 2.8239794)
@@ -167,6 +178,7 @@ shape = SubResource("RectangleShape2D_efxa6")
 [node name="Doorman_Room2" parent="Hallway" unique_id=1482202694 instance=ExtResource("2_1bvp3")]
 position = Vector2(497.79898, 164)
 rotation = -0.21555938
+npcName = "Doorman!"
 myPicture = ExtResource("6_7mycd")
 
 [node name="Sprite2D" type="Sprite2D" parent="Hallway/Doorman_Room2" unique_id=1818097372]
@@ -177,6 +189,41 @@ texture = ExtResource("6_272bh")
 
 [node name="npc_quiet" type="Sprite2D" parent="." unique_id=1188624416]
 position = Vector2(180.99997, -586)
+rotation = -0.7853982
+scale = Vector2(0.047934003, 0.04799771)
+texture = ExtResource("8_kek77")
+
+[node name="npc_quiet6" type="Sprite2D" parent="." unique_id=235651183]
+position = Vector2(493.99997, -479)
+rotation = -3.1415927
+scale = Vector2(0.047934003, 0.04799771)
+texture = ExtResource("8_kek77")
+
+[node name="npc_quiet7" type="Sprite2D" parent="." unique_id=922509059]
+position = Vector2(393.99997, -475)
+scale = Vector2(0.047934003, 0.04799771)
+texture = ExtResource("8_kek77")
+
+[node name="npc_quiet2" type="Sprite2D" parent="." unique_id=388921315]
+position = Vector2(926, -447)
+rotation = 1.8325958
+scale = Vector2(0.047934003, 0.04799771)
+texture = ExtResource("8_kek77")
+
+[node name="npc_quiet5" type="Sprite2D" parent="." unique_id=1385051156]
+position = Vector2(999, -365.00003)
+rotation = -2.8797934
+scale = Vector2(0.047934003, 0.04799771)
+texture = ExtResource("8_kek77")
+
+[node name="npc_quiet3" type="Sprite2D" parent="." unique_id=734398660]
+position = Vector2(921, -294.99997)
+rotation = -2.0943952
+scale = Vector2(0.047934003, 0.04799771)
+texture = ExtResource("8_kek77")
+
+[node name="npc_quiet4" type="Sprite2D" parent="." unique_id=68465084]
+position = Vector2(817, -274)
 rotation = -0.7853982
 scale = Vector2(0.047934003, 0.04799771)
 texture = ExtResource("8_kek77")
