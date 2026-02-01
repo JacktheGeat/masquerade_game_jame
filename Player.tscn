@@ -4,9 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://dvm5iyceuyi8w" path="res://textures/kirby_player.png" id="2_kpjcp"]
 [ext_resource type="LabelSettings" uid="uid://4pw2o7wkrx12" path="res://resources/inventory_headers.tres" id="3_5ncpa"]
 [ext_resource type="Texture2D" uid="uid://df0ll4bgcbp8e" path="res://textures/portrait_plain.png" id="3_kne1u"]
+[ext_resource type="Texture2D" uid="uid://dc80s6cmxfodm" path="res://textures/mask_cotton.png" id="5_3tkgg"]
 [ext_resource type="Texture2D" uid="uid://cjd0j0fgg1wbj" path="res://textures/cotton_sprite.png" id="5_wi0c6"]
 [ext_resource type="Texture2D" uid="uid://ctly06o2v7ona" path="res://textures/ribbon_sprite.png" id="6_hp6x6"]
+[ext_resource type="Texture2D" uid="uid://dtcukrg8ufx1o" path="res://textures/mask_ribbons.png" id="6_l6ohk"]
 [ext_resource type="Texture2D" uid="uid://cafvchskuly7x" path="res://textures/paint_sprite.png" id="7_3tkgg"]
+[ext_resource type="Texture2D" uid="uid://ncq6r6e2bq7a" path="res://textures/mask_spray.png" id="7_oudfo"]
 [ext_resource type="Texture2D" uid="uid://gxk0aeuad4cj" path="res://textures/fabric_sprite.png" id="8_l6ohk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1bvp3"]
@@ -29,6 +32,7 @@ texture = ExtResource("2_kpjcp")
 [node name="Inventory_Layer" type="CanvasLayer" parent="." unique_id=829253343]
 
 [node name="MaskPanel" type="Panel" parent="Inventory_Layer" unique_id=413917334]
+z_index = -2
 offset_right = 198.0
 offset_bottom = 146.0
 
@@ -53,27 +57,24 @@ position = Vector2(99.99999, 75)
 scale = Vector2(0.033685006, 0.03539055)
 
 [node name="Portrait_Plain" type="Sprite2D" parent="Inventory_Layer/Anchor_Portraits" unique_id=23718237]
+z_index = -1
 texture = ExtResource("3_kne1u")
 
 [node name="Portrait_cotton" type="Sprite2D" parent="Inventory_Layer/Anchor_Portraits" unique_id=302086323]
-visible = false
-position = Vector2(0.00024414063, -649.891)
-scale = Vector2(0.6933876, 0.55461675)
-texture = ExtResource("5_wi0c6")
+z_index = 1
+position = Vector2(-29.686554, -113.024536)
+scale = Vector2(40, 40)
+texture = ExtResource("5_3tkgg")
 
 [node name="Portrait_ribbon" type="Sprite2D" parent="Inventory_Layer/Anchor_Portraits" unique_id=1055201167]
-visible = false
-position = Vector2(1276.5326, -226.04904)
-rotation = 2.8797934
-scale = Vector2(0.6, 0.5)
-texture = ExtResource("6_hp6x6")
+position = Vector2(0.00024414063, 28.256134)
+scale = Vector2(40, 40)
+texture = ExtResource("6_l6ohk")
 
 [node name="Portrait_paint" type="Sprite2D" parent="Inventory_Layer/Anchor_Portraits" unique_id=568011854]
-visible = false
-position = Vector2(-1246.8455, -84.76837)
-rotation = 0.5235988
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("7_3tkgg")
+position = Vector2(0.0002746582, 1.5258789e-05)
+scale = Vector2(40, 40)
+texture = ExtResource("7_oudfo")
 
 [node name="Anchor_Items" type="Node2D" parent="Inventory_Layer" unique_id=104457975]
 position = Vector2(42, 211)
