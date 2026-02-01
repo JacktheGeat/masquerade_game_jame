@@ -33,13 +33,11 @@ func _physics_process(delta: float) -> void:
 	
 func check_for_player():
 	var area2ds = $NPC_detector.get_overlapping_areas()
-	for obj in area2ds:
-		print(obj.name)
-		#if obj.get_class() == :
-			#print("Player is currently inside the area!")
-			## Perform an action, e.g., interact with the object
-		if obj.has_method("interact"):
-			print("interact!")
-			#obj.interact(playerInventory)
-			#return true # Found the player
+	for obj: Area2D in area2ds:
+		if is_instance_of(obj, NPC):
+			if obj.has_method("interact"):
+				print("interact!")
+				var dialogue = obj.interact(playerInventory)
+				print(dialogue.)
+				return true # Found the player
 	return false # Player not found in the area
