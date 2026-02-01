@@ -10,6 +10,7 @@ var speechStrings :Array[String]
 func assemble(npcPicture, npcDialog, finalGift=null):
 	# install npc picture where it goes
 	# display first speech string
+	$Panel/portrait.texture = npcPicture
 
 	# if final gift is present, add "you got [item]" sting to end
 	pass
