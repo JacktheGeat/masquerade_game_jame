@@ -11,9 +11,9 @@ const roomYMAX = 648
 var isDialogueListening: bool = false
 var currentDialogue: DialogBox = null
 
-var playerInventory := { 'cotton': false,
-						'ribbon': false,
-						'paint': false,
+var playerInventory := { 'cotton': 0,
+						'ribbon': 0,
+						'paint': 0,
 						}
 
 
@@ -59,5 +59,15 @@ func getInventory(item: String):
 	return playerInventory.get(item, 0)
 
 func setInventory(item: String, Count: int = 1):
+	print(playerInventory)
+	print(item)
+	print(Count)
 	playerInventory.set(item, playerInventory.get(item, 0)+Count)
+	if get_node('Inventory_Layer/Anchor_Items/%s' % item):
+		if playerInventory.get(item) > 0:
+			get_node('Inventory_Layer/Anchor_Items/%s' % item).show()
+			get_node('Inventory_Layer/Anchor_Portraits/Portrait_%s' % item).show()
+		else: 
+			get_node(item).visible = false
+			get_node('Portrait_%s' % item).visible = false
 	print("Added %s %s to inventory!" % [Count, item])

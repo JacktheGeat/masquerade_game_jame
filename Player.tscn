@@ -56,6 +56,7 @@ scale = Vector2(0.033685006, 0.03539055)
 texture = ExtResource("3_kne1u")
 
 [node name="Portrait_cotton" type="Sprite2D" parent="Inventory_Layer/Anchor_Portraits" unique_id=302086323]
+visible = false
 position = Vector2(0.00024414063, -649.891)
 scale = Vector2(0.6933876, 0.55461675)
 texture = ExtResource("5_wi0c6")
@@ -79,6 +80,7 @@ position = Vector2(42, 211)
 scale = Vector2(0.05111835, 0.048060853)
 
 [node name="cotton" type="Sprite2D" parent="Inventory_Layer/Anchor_Items" unique_id=473931617]
+visible = false
 position = Vector2(884.94055, 501.8992)
 texture = ExtResource("5_wi0c6")
 

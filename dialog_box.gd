@@ -26,6 +26,5 @@ func nextPage():
 		self.queue_free()
 		return false
 	currentPage += 1
-	$HBoxContainer/SpeechBox.clear()
-	$HBoxContainer/SpeechBox.append_text('\n'.join(speechStrings[currentPage].split('\\n')))
+	$HBoxContainer/SpeechBox.text = '\n'.join(speechStrings[currentPage].split('\\n'))
 	return true
